@@ -1,0 +1,14 @@
+.quartz/
+public/
+content/
+node_modules/
+.DS_Store
+# Your own copies of the books (never commit them)
+Reading/
+# Learner-generated files stay local
+course/workspace/*
+!course/workspace/.gitkeep
+course/exams/*
+!course/exams/.keys/
+course/exams/.keys/*
+!course/exams/.keys/.gitkeep

@@ -1,0 +1,909 @@
+{
+  "course": {
+    "name": "CBAP in 13 Weeks: Interactive",
+    "code": "cbap13",
+    "version": "1.0.0",
+    "babok": "v3",
+    "hours_per_week": 10,
+    "scenario": "GreenBasket Markets: Click & Collect"
+  },
+  "modules": [
+    {
+      "id": "1",
+      "name": "Foundations",
+      "weeks": "1\u20132",
+      "description": "Exam anatomy, the BACCM, key terms, requirements classification, stakeholder roles, how a BABOK task is built, the diagnostic exam, and the input/output backbone of the whole guide.",
+      "lessons": [
+        {
+          "id": "1.1",
+          "name": "Welcome to GreenBasket & your CBAP game plan",
+          "week": 1,
+          "minutes": 60,
+          "reading_min": 30,
+          "type": "lesson",
+          "ka": "GEN",
+          "path": "lesson-modules/1.1-welcome/LESSON.md",
+          "description": "Your first day at GreenBasket, and the exam game plan."
+        },
+        {
+          "id": "1.2",
+          "name": "The BACCM: six lenses on every change",
+          "week": 1,
+          "minutes": 75,
+          "reading_min": 30,
+          "type": "lesson",
+          "ka": "FND",
+          "path": "lesson-modules/1.2-baccm/LESSON.md",
+          "description": "The six core concepts that every BABOK task is built on."
+        },
+        {
+          "id": "1.3",
+          "name": "Requirements classification & requirements vs designs",
+          "week": 1,
+          "minutes": 75,
+          "reading_min": 30,
+          "type": "lesson",
+          "ka": "FND",
+          "path": "lesson-modules/1.3-requirements-classification/LESSON.md",
+          "description": "Business, stakeholder, solution (functional and non-functional), and transition requirements."
+        },
+        {
+          "id": "1.4",
+          "name": "Stakeholders: the 11 generic roles",
+          "week": 1,
+          "minutes": 60,
+          "reading_min": 30,
+          "type": "lesson",
+          "ka": "FND",
+          "path": "lesson-modules/1.4-stakeholder-roles/LESSON.md",
+          "description": "Who is who, in BABOK terms, at GreenBasket."
+        },
+        {
+          "id": "1.5",
+          "name": "Anatomy of a BABOK task & how to study the Guide",
+          "week": 1,
+          "minutes": 90,
+          "reading_min": 60,
+          "type": "lesson",
+          "ka": "FND",
+          "path": "lesson-modules/1.5-task-anatomy/LESSON.md",
+          "description": "The 8-part structure behind all 30 tasks, and how to read the BABOK efficiently."
+        },
+        {
+          "id": "1.6",
+          "name": "Diagnostic exam (50 questions)",
+          "week": 2,
+          "minutes": 100,
+          "reading_min": 0,
+          "type": "exam",
+          "ka": "ALL",
+          "path": "lesson-modules/1.6-diagnostic-exam/LESSON.md",
+          "description": "Find your baseline. No pressure, no studying for it."
+        },
+        {
+          "id": "1.7",
+          "name": "Diagnostic review & your personal focus plan",
+          "week": 2,
+          "minutes": 75,
+          "reading_min": 30,
+          "type": "review",
+          "ka": "ALL",
+          "path": "lesson-modules/1.7-diagnostic-review/LESSON.md",
+          "description": "Turn your diagnostic into a personal plan."
+        },
+        {
+          "id": "1.8",
+          "name": "The big map: how the 30 tasks hand off to each other",
+          "week": 2,
+          "minutes": 90,
+          "reading_min": 30,
+          "type": "lesson",
+          "ka": "FND",
+          "path": "lesson-modules/1.8-io-backbone/LESSON.md",
+          "description": "The input/output backbone that answers \"what comes next?\" questions."
+        },
+        {
+          "id": "1.9",
+          "name": "Underlying competencies & perspectives: a primer",
+          "week": 2,
+          "minutes": 60,
+          "reading_min": 45,
+          "type": "lesson",
+          "ka": "COMP",
+          "path": "lesson-modules/1.9-competencies-perspectives-primer/LESSON.md",
+          "description": "The skills and lenses that frame every scenario."
+        },
+        {
+          "id": "1.10",
+          "name": "Foundation checkpoint",
+          "week": 2,
+          "minutes": 60,
+          "reading_min": 15,
+          "type": "drill",
+          "ka": "FND",
+          "path": "lesson-modules/1.10-foundation-checkpoint/LESSON.md",
+          "description": "Lock in the foundations before Knowledge Area deep dives."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Business Analysis Planning & Monitoring (14%)",
+      "weeks": "3",
+      "description": "Plan how business analysis will be done on GreenBasket Click & Collect: approach, stakeholder engagement, governance, information management, and improving BA performance.",
+      "lessons": [
+        {
+          "id": "2.1",
+          "name": "BAPM overview + 3.1 Plan Business Analysis Approach",
+          "week": 3,
+          "minutes": 80,
+          "reading_min": 30,
+          "type": "lesson",
+          "ka": "BAPM",
+          "path": "lesson-modules/2.1-plan-ba-approach/LESSON.md",
+          "description": "Predictive or adaptive? Choosing how BA work gets done."
+        },
+        {
+          "id": "2.2",
+          "name": "3.2 Plan Stakeholder Engagement",
+          "week": 3,
+          "minutes": 75,
+          "reading_min": 20,
+          "type": "lesson",
+          "ka": "BAPM",
+          "path": "lesson-modules/2.2-plan-stakeholder-engagement/LESSON.md",
+          "description": "Stakeholder analysis, collaboration and communication needs, with Marcus."
+        },
+        {
+          "id": "2.3",
+          "name": "3.3 Plan Business Analysis Governance",
+          "week": 3,
+          "minutes": 70,
+          "reading_min": 20,
+          "type": "lesson",
+          "ka": "BAPM",
+          "path": "lesson-modules/2.3-plan-ba-governance/LESSON.md",
+          "description": "Who decides, who approves, and how changes are controlled."
+        },
+        {
+          "id": "2.4",
+          "name": "3.4 Plan Business Analysis Information Management",
+          "week": 3,
+          "minutes": 70,
+          "reading_min": 20,
+          "type": "lesson",
+          "ka": "BAPM",
+          "path": "lesson-modules/2.4-plan-info-management/LESSON.md",
+          "description": "Organization, abstraction, traceability approach, reuse, storage and attributes."
+        },
+        {
+          "id": "2.5",
+          "name": "3.5 Identify Business Analysis Performance Improvements",
+          "week": 3,
+          "minutes": 70,
+          "reading_min": 20,
+          "type": "lesson",
+          "ka": "BAPM",
+          "path": "lesson-modules/2.5-ba-performance-improvements/LESSON.md",
+          "description": "Measuring and improving the BA work itself."
+        },
+        {
+          "id": "2.6",
+          "name": "BAPM techniques lab: estimation, item tracking, lessons learned, reviews",
+          "week": 3,
+          "minutes": 75,
+          "reading_min": 15,
+          "type": "lab",
+          "ka": "TECH",
+          "path": "lesson-modules/2.6-bapm-techniques-lab/LESSON.md",
+          "description": "Hands-on with the techniques BAPM relies on."
+        },
+        {
+          "id": "2.7",
+          "name": "BAPM exam drill (40 questions)",
+          "week": 3,
+          "minutes": 60,
+          "reading_min": 0,
+          "type": "drill",
+          "ka": "BAPM",
+          "path": "lesson-modules/2.7-bapm-exam-drill/LESSON.md",
+          "description": "Prove BAPM mastery."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Elicitation & Collaboration (12%)",
+      "weeks": "4",
+      "description": "Prepare, conduct and confirm elicitation; communicate BA information; manage stakeholder collaboration. Includes a live interview role-play with a GreenBasket picker.",
+      "lessons": [
+        {
+          "id": "3.1",
+          "name": "E&C overview + 4.1 Prepare for Elicitation",
+          "week": 4,
+          "minutes": 75,
+          "reading_min": 30,
+          "type": "lesson",
+          "ka": "E&C",
+          "path": "lesson-modules/3.1-prepare-for-elicitation/LESSON.md",
+          "description": "Plan an elicitation activity: scope, techniques, logistics, materials, people."
+        },
+        {
+          "id": "3.2",
+          "name": "4.2 Conduct Elicitation: live interview with Kim",
+          "week": 4,
+          "minutes": 90,
+          "reading_min": 20,
+          "type": "lesson",
+          "ka": "E&C",
+          "path": "lesson-modules/3.2-conduct-elicitation/LESSON.md",
+          "description": "You interview Kim Tran, the picker who knows why Harvest failed."
+        },
+        {
+          "id": "3.3",
+          "name": "4.3 Confirm Elicitation Results",
+          "week": 4,
+          "minutes": 70,
+          "reading_min": 20,
+          "type": "lesson",
+          "ka": "E&C",
+          "path": "lesson-modules/3.3-confirm-elicitation-results/LESSON.md",
+          "description": "Compare against sources and other results. Who was right about pick time?"
+        },
+        {
+          "id": "3.4",
+          "name": "4.4 Communicate Business Analysis Information",
+          "week": 4,
+          "minutes": 70,
+          "reading_min": 20,
+          "type": "lesson",
+          "ka": "E&C",
+          "path": "lesson-modules/3.4-communicate-ba-information/LESSON.md",
+          "description": "Same findings, three audiences: Elena, Marcus, the vendors."
+        },
+        {
+          "id": "3.5",
+          "name": "4.5 Manage Stakeholder Collaboration",
+          "week": 4,
+          "minutes": 70,
+          "reading_min": 20,
+          "type": "lesson",
+          "ka": "E&C",
+          "path": "lesson-modules/3.5-manage-stakeholder-collaboration/LESSON.md",
+          "description": "Marcus cancels again. Keep collaboration alive."
+        },
+        {
+          "id": "3.6",
+          "name": "Elicitation techniques lab: choosing the right technique",
+          "week": 4,
+          "minutes": 80,
+          "reading_min": 20,
+          "type": "lab",
+          "ka": "TECH",
+          "path": "lesson-modules/3.6-elicitation-techniques-lab/LESSON.md",
+          "description": "Workshops, focus groups, surveys, observation, brainstorming, prototyping: when to use each."
+        },
+        {
+          "id": "3.7",
+          "name": "E&C exam drill (40 questions)",
+          "week": 4,
+          "minutes": 60,
+          "reading_min": 0,
+          "type": "drill",
+          "ka": "E&C",
+          "path": "lesson-modules/3.7-ec-exam-drill/LESSON.md",
+          "description": "Prove E&C mastery."
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Requirements Life Cycle Management (15%)",
+      "weeks": "5",
+      "description": "Trace, maintain and prioritize requirements and designs; assess a disruptive change request (same-day delivery); gain approval with conflicting stakeholders.",
+      "lessons": [
+        {
+          "id": "4.1",
+          "name": "RLCM overview + 5.1 Trace Requirements",
+          "week": 5,
+          "minutes": 75,
+          "reading_min": 30,
+          "type": "lesson",
+          "ka": "RLCM",
+          "path": "lesson-modules/4.1-trace-requirements/LESSON.md",
+          "description": "Derive, depends, satisfy, validate: building the chain of \"why\"."
+        },
+        {
+          "id": "4.2",
+          "name": "5.2 Maintain Requirements",
+          "week": 5,
+          "minutes": 60,
+          "reading_min": 15,
+          "type": "lesson",
+          "ka": "RLCM",
+          "path": "lesson-modules/4.2-maintain-requirements/LESSON.md",
+          "description": "Keep requirements accurate, attributed and reusable."
+        },
+        {
+          "id": "4.3",
+          "name": "5.3 Prioritize Requirements",
+          "week": 5,
+          "minutes": 85,
+          "reading_min": 20,
+          "type": "lesson",
+          "ka": "RLCM",
+          "path": "lesson-modules/4.3-prioritize-requirements/LESSON.md",
+          "description": "Everyone says \"High\". Run a prioritization that holds up."
+        },
+        {
+          "id": "4.4",
+          "name": "5.4 Assess Requirements Changes: CR-017 same-day delivery",
+          "week": 5,
+          "minutes": 85,
+          "reading_min": 20,
+          "type": "lesson",
+          "ka": "RLCM",
+          "path": "lesson-modules/4.4-assess-requirements-changes/LESSON.md",
+          "description": "Marketing wants delivery in release 1, with media already booked."
+        },
+        {
+          "id": "4.5",
+          "name": "5.5 Approve Requirements",
+          "week": 5,
+          "minutes": 70,
+          "reading_min": 20,
+          "type": "lesson",
+          "ka": "RLCM",
+          "path": "lesson-modules/4.5-approve-requirements/LESSON.md",
+          "description": "Consensus, conflict and sign-off, without a Harvest-style rubber stamp."
+        },
+        {
+          "id": "4.6",
+          "name": "RLCM techniques lab: decision analysis, backlog management, business rules",
+          "week": 5,
+          "minutes": 75,
+          "reading_min": 15,
+          "type": "lab",
+          "ka": "TECH",
+          "path": "lesson-modules/4.6-rlcm-techniques-lab/LESSON.md",
+          "description": "Decision matrices, backlogs and business rules in practice."
+        },
+        {
+          "id": "4.7",
+          "name": "RLCM exam drill (40 questions)",
+          "week": 5,
+          "minutes": 60,
+          "reading_min": 0,
+          "type": "drill",
+          "ka": "RLCM",
+          "path": "lesson-modules/4.7-rlcm-exam-drill/LESSON.md",
+          "description": "Prove RLCM mastery."
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Strategy Analysis (15%)",
+      "weeks": "6",
+      "description": "Current state, future state, risks and change strategy for Click & Collect, plus the business case and financial analysis that the CFO demands.",
+      "lessons": [
+        {
+          "id": "5.1",
+          "name": "SA overview + 6.1 Analyze Current State",
+          "week": 6,
+          "minutes": 80,
+          "reading_min": 20,
+          "type": "lesson",
+          "ka": "SA",
+          "path": "lesson-modules/5.1-analyze-current-state/LESSON.md",
+          "description": "Why must GreenBasket change? Root causes, capabilities, and business requirements."
+        },
+        {
+          "id": "5.2",
+          "name": "6.2 Define Future State",
+          "week": 6,
+          "minutes": 80,
+          "reading_min": 20,
+          "type": "lesson",
+          "ka": "SA",
+          "path": "lesson-modules/5.2-define-future-state/LESSON.md",
+          "description": "Goals, SMART objectives, constraints, assumptions and potential value."
+        },
+        {
+          "id": "5.3",
+          "name": "6.3 Assess Risks",
+          "week": 6,
+          "minutes": 70,
+          "reading_min": 20,
+          "type": "lesson",
+          "ka": "SA",
+          "path": "lesson-modules/5.3-assess-risks/LESSON.md",
+          "description": "Risk of changing and of not changing, plus risk tolerance."
+        },
+        {
+          "id": "5.4",
+          "name": "6.4 Define Change Strategy",
+          "week": 6,
+          "minutes": 85,
+          "reading_min": 20,
+          "type": "lesson",
+          "ka": "SA",
+          "path": "lesson-modules/5.4-define-change-strategy/LESSON.md",
+          "description": "Gap analysis, readiness, transition states, and the solution scope."
+        },
+        {
+          "id": "5.5",
+          "name": "Lab: business case & financial analysis (NPV, IRR, ROI, payback)",
+          "week": 6,
+          "minutes": 90,
+          "reading_min": 20,
+          "type": "lab",
+          "ka": "TECH",
+          "path": "lesson-modules/5.5-business-case-financials/LESSON.md",
+          "description": "The CFO wants numbers. You give numbers."
+        },
+        {
+          "id": "5.6",
+          "name": "Lab: strategy techniques (BMC, capability analysis, benchmarking, balanced scorecard)",
+          "week": 6,
+          "minutes": 70,
+          "reading_min": 15,
+          "type": "lab",
+          "ka": "TECH",
+          "path": "lesson-modules/5.6-strategy-techniques-lab/LESSON.md",
+          "description": "The strategy toolkit, applied."
+        },
+        {
+          "id": "5.7",
+          "name": "SA exam drill (40 questions)",
+          "week": 6,
+          "minutes": 60,
+          "reading_min": 0,
+          "type": "drill",
+          "ka": "SA",
+          "path": "lesson-modules/5.7-sa-exam-drill/LESSON.md",
+          "description": "Prove SA mastery."
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Requirements Analysis & Design Definition (30%)",
+      "weeks": "7\u20138",
+      "description": "The biggest KA. Specify and model requirements (all five model categories), verify and validate, architect, define design options, and recommend a solution: ShelfWise vs CodeHarbor vs OmniGrocer.",
+      "lessons": [
+        {
+          "id": "6.1",
+          "name": "RADD overview + 7.1 Specify & Model I: model categories and abstraction",
+          "week": 7,
+          "minutes": 85,
+          "reading_min": 30,
+          "type": "lesson",
+          "ka": "RADD",
+          "path": "lesson-modules/6.1-specify-model-1-categories/LESSON.md",
+          "description": "Five model categories, and choosing the right level of abstraction."
+        },
+        {
+          "id": "6.2",
+          "name": "7.1 Specify & Model II: process models, use cases, user stories",
+          "week": 7,
+          "minutes": 90,
+          "reading_min": 20,
+          "type": "lab",
+          "ka": "RADD",
+          "path": "lesson-modules/6.2-modelling-lab-process-usecase/LESSON.md",
+          "description": "Model the pick-and-handover flow three ways."
+        },
+        {
+          "id": "6.3",
+          "name": "7.1 Specify & Model III: data & information models",
+          "week": 7,
+          "minutes": 85,
+          "reading_min": 20,
+          "type": "lab",
+          "ka": "RADD",
+          "path": "lesson-modules/6.3-modelling-lab-data/LESSON.md",
+          "description": "Data model, data dictionary, glossary, DFD, concept and state models."
+        },
+        {
+          "id": "6.4",
+          "name": "7.2 Verify Requirements",
+          "week": 7,
+          "minutes": 80,
+          "reading_min": 15,
+          "type": "lesson",
+          "ka": "RADD",
+          "path": "lesson-modules/6.4-verify-requirements/LESSON.md",
+          "description": "Tom's list, torn apart by quality characteristics."
+        },
+        {
+          "id": "6.5",
+          "name": "7.3 Validate Requirements",
+          "week": 7,
+          "minutes": 75,
+          "reading_min": 15,
+          "type": "lesson",
+          "ka": "RADD",
+          "path": "lesson-modules/6.5-validate-requirements/LESSON.md",
+          "description": "Do these requirements actually deliver the business objectives?"
+        },
+        {
+          "id": "6.6",
+          "name": "RADD mid-point drill (40 questions)",
+          "week": 7,
+          "minutes": 60,
+          "reading_min": 0,
+          "type": "drill",
+          "ka": "RADD",
+          "path": "lesson-modules/6.6-radd-midpoint-drill/LESSON.md",
+          "description": "Half of RADD done. Check it sticks."
+        },
+        {
+          "id": "6.7",
+          "name": "7.4 Define Requirements Architecture",
+          "week": 8,
+          "minutes": 75,
+          "reading_min": 20,
+          "type": "lesson",
+          "ka": "RADD",
+          "path": "lesson-modules/6.7-requirements-architecture/LESSON.md",
+          "description": "Viewpoints, views, completeness: how it all fits together."
+        },
+        {
+          "id": "6.8",
+          "name": "7.5 Define Design Options",
+          "week": 8,
+          "minutes": 80,
+          "reading_min": 15,
+          "type": "lesson",
+          "ka": "RADD",
+          "path": "lesson-modules/6.8-design-options/LESSON.md",
+          "description": "Build, buy or hybrid? Allocate requirements to components."
+        },
+        {
+          "id": "6.9",
+          "name": "7.6 Analyze Potential Value and Recommend Solution",
+          "week": 8,
+          "minutes": 85,
+          "reading_min": 15,
+          "type": "lesson",
+          "ka": "RADD",
+          "path": "lesson-modules/6.9-recommend-solution/LESSON.md",
+          "description": "Score the options and make the call, even if it isn't the sponsor's favourite."
+        },
+        {
+          "id": "6.10",
+          "name": "RADD techniques lab I: NFRs, acceptance criteria, prototyping, interface analysis",
+          "week": 8,
+          "minutes": 75,
+          "reading_min": 15,
+          "type": "lab",
+          "ka": "TECH",
+          "path": "lesson-modules/6.10-radd-lab-nfr-prototype/LESSON.md",
+          "description": "Qualities, interfaces and prototypes."
+        },
+        {
+          "id": "6.11",
+          "name": "RADD techniques lab II: decision modelling, roles & permissions, functional decomposition, scope models",
+          "week": 8,
+          "minutes": 75,
+          "reading_min": 15,
+          "type": "lab",
+          "ka": "TECH",
+          "path": "lesson-modules/6.11-radd-lab-rules-decisions/LESSON.md",
+          "description": "Decision tables, access rights and decomposition."
+        },
+        {
+          "id": "6.12",
+          "name": "RADD final drill (40 questions)",
+          "week": 8,
+          "minutes": 60,
+          "reading_min": 0,
+          "type": "drill",
+          "ka": "RADD",
+          "path": "lesson-modules/6.12-radd-final-drill/LESSON.md",
+          "description": "Close out the biggest KA."
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Solution Evaluation (14%)",
+      "weeks": "9",
+      "description": "The 6-store pilot has run for 10 weeks. Measure it, analyze variances, separate solution limitations from enterprise limitations, and recommend actions.",
+      "lessons": [
+        {
+          "id": "7.1",
+          "name": "SE overview + 8.1 Measure Solution Performance",
+          "week": 9,
+          "minutes": 80,
+          "reading_min": 30,
+          "type": "lesson",
+          "ka": "SE",
+          "path": "lesson-modules/7.1-measure-solution-performance/LESSON.md",
+          "description": "Ten weeks of pilot data. What should you measure?"
+        },
+        {
+          "id": "7.2",
+          "name": "8.2 Analyze Performance Measures",
+          "week": 9,
+          "minutes": 80,
+          "reading_min": 15,
+          "type": "lesson",
+          "ka": "SE",
+          "path": "lesson-modules/7.2-analyze-performance-measures/LESSON.md",
+          "description": "Trends, variances and accuracy in the pilot data."
+        },
+        {
+          "id": "7.3",
+          "name": "8.3 Assess Solution Limitations",
+          "week": 9,
+          "minutes": 70,
+          "reading_min": 15,
+          "type": "lesson",
+          "ka": "SE",
+          "path": "lesson-modules/7.3-assess-solution-limitations/LESSON.md",
+          "description": "What inside the solution is holding value back?"
+        },
+        {
+          "id": "7.4",
+          "name": "8.4 Assess Enterprise Limitations",
+          "week": 9,
+          "minutes": 75,
+          "reading_min": 15,
+          "type": "lesson",
+          "ka": "SE",
+          "path": "lesson-modules/7.4-assess-enterprise-limitations/LESSON.md",
+          "description": "Incentives, culture, structure: the problems outside the software."
+        },
+        {
+          "id": "7.5",
+          "name": "8.5 Recommend Actions to Increase Solution Value",
+          "week": 9,
+          "minutes": 75,
+          "reading_min": 15,
+          "type": "lesson",
+          "ka": "SE",
+          "path": "lesson-modules/7.5-recommend-actions/LESSON.md",
+          "description": "Before chain-wide rollout: what should change?"
+        },
+        {
+          "id": "7.6",
+          "name": "SE techniques lab: metrics & KPIs, data mining, vendor assessment, root cause",
+          "week": 9,
+          "minutes": 60,
+          "reading_min": 15,
+          "type": "lab",
+          "ka": "TECH",
+          "path": "lesson-modules/7.6-se-techniques-lab/LESSON.md",
+          "description": "The measurement toolkit."
+        },
+        {
+          "id": "7.7",
+          "name": "SE exam drill + Phase 2 milestone",
+          "week": 9,
+          "minutes": 75,
+          "reading_min": 0,
+          "type": "drill",
+          "ka": "SE",
+          "path": "lesson-modules/7.7-se-exam-drill/LESSON.md",
+          "description": "Finish Phase 2: all 30 tasks done."
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Consolidation: techniques, perspectives, competencies",
+      "weeks": "10",
+      "description": "All 50 techniques compared in families, the 5 perspectives, and the underlying competencies. Plus the technique matrix you will revise from in weeks 11\u201313.",
+      "lessons": [
+        {
+          "id": "8.1",
+          "name": "Technique families I: elicitation & collaboration techniques",
+          "week": 10,
+          "minutes": 80,
+          "reading_min": 15,
+          "type": "review",
+          "ka": "TECH",
+          "path": "lesson-modules/8.1-techniques-collaboration/LESSON.md",
+          "description": "Compare the look-alikes: interviews, workshops, focus groups, surveys, observation, brainstorming, collaborative games, document analysis, reviews, lessons learned."
+        },
+        {
+          "id": "8.2",
+          "name": "Technique families II: modelling techniques",
+          "week": 10,
+          "minutes": 80,
+          "reading_min": 15,
+          "type": "review",
+          "ka": "TECH",
+          "path": "lesson-modules/8.2-techniques-modelling/LESSON.md",
+          "description": "Process, use case, user story, sequence, state, data, DFD, concept, decision, scope, org, roles & permissions, functional decomposition, prototyping."
+        },
+        {
+          "id": "8.3",
+          "name": "Technique families III: analysis, decision & estimation techniques",
+          "week": 10,
+          "minutes": 75,
+          "reading_min": 15,
+          "type": "review",
+          "ka": "TECH",
+          "path": "lesson-modules/8.3-techniques-analysis-decision/LESSON.md",
+          "description": "Decision analysis, risk, financial, prioritization, estimation, business rules, NFR, interface, acceptance criteria, item tracking, backlog, glossary, data dictionary."
+        },
+        {
+          "id": "8.4",
+          "name": "Technique families IV: strategy & measurement techniques",
+          "week": 10,
+          "minutes": 70,
+          "reading_min": 10,
+          "type": "review",
+          "ka": "TECH",
+          "path": "lesson-modules/8.4-techniques-strategy-measurement/LESSON.md",
+          "description": "SWOT, BMC, business capability analysis, business cases, balanced scorecard, benchmarking, metrics & KPIs, data mining, root cause, process analysis, vendor assessment, stakeholder list/map/personas."
+        },
+        {
+          "id": "8.5",
+          "name": "Perspectives I: Agile, Business Intelligence, Information Technology",
+          "week": 10,
+          "minutes": 75,
+          "reading_min": 30,
+          "type": "lesson",
+          "ka": "PERSP",
+          "path": "lesson-modules/8.5-perspectives-agile-bi-it/LESSON.md",
+          "description": "How BA work shifts in agile, BI and IT contexts."
+        },
+        {
+          "id": "8.6",
+          "name": "Perspectives II: Business Architecture & Business Process Management",
+          "week": 10,
+          "minutes": 70,
+          "reading_min": 25,
+          "type": "lesson",
+          "ka": "PERSP",
+          "path": "lesson-modules/8.6-perspectives-ba-bpm/LESSON.md",
+          "description": "Enterprise-level models and process improvement."
+        },
+        {
+          "id": "8.7",
+          "name": "Underlying competencies deep-dive + consolidation quiz",
+          "week": 10,
+          "minutes": 80,
+          "reading_min": 20,
+          "type": "review",
+          "ka": "COMP",
+          "path": "lesson-modules/8.7-competencies-deep-dive/LESSON.md",
+          "description": "Name the competency behind the behaviour, then a 30-question consolidation."
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Exam simulation & final preparation",
+      "weeks": "11\u201313",
+      "description": "Exam technique, three full 120-question mocks under exam conditions, targeted gap-closing sprints, case-study clinic, final review and exam-day playbook.",
+      "lessons": [
+        {
+          "id": "9.1",
+          "name": "Exam technique: reading case studies, elimination, time management",
+          "week": 11,
+          "minutes": 60,
+          "reading_min": 30,
+          "type": "lesson",
+          "ka": "GEN",
+          "path": "lesson-modules/9.1-exam-technique/LESSON.md",
+          "description": "How to think like the exam."
+        },
+        {
+          "id": "9.2",
+          "name": "Full Mock Exam #1 (120 questions, 210 minutes)",
+          "week": 11,
+          "minutes": 225,
+          "reading_min": 0,
+          "type": "exam",
+          "ka": "ALL",
+          "path": "lesson-modules/9.2-mock-exam-1/LESSON.md",
+          "description": "The first full simulation."
+        },
+        {
+          "id": "9.3",
+          "name": "Mock #1 deep review & gap plan",
+          "week": 11,
+          "minutes": 120,
+          "reading_min": 30,
+          "type": "review",
+          "ka": "ALL",
+          "path": "lesson-modules/9.3-mock-1-review/LESSON.md",
+          "description": "Every wrong AND every guessed answer, reviewed against the BABOK."
+        },
+        {
+          "id": "9.4",
+          "name": "Gap-closing sprint I",
+          "week": 11,
+          "minutes": 90,
+          "reading_min": 30,
+          "type": "drill",
+          "ka": "ALL",
+          "path": "lesson-modules/9.4-gap-sprint-1/LESSON.md",
+          "description": "Targeted re-teach + drills on your top gaps."
+        },
+        {
+          "id": "9.5",
+          "name": "Case-study clinic: long multi-KA scenarios",
+          "week": 12,
+          "minutes": 90,
+          "reading_min": 0,
+          "type": "drill",
+          "ka": "ALL",
+          "path": "lesson-modules/9.5-case-study-clinic/LESSON.md",
+          "description": "The long cases that decide pass or fail."
+        },
+        {
+          "id": "9.6",
+          "name": "Full Mock Exam #2",
+          "week": 12,
+          "minutes": 225,
+          "reading_min": 0,
+          "type": "exam",
+          "ka": "ALL",
+          "path": "lesson-modules/9.6-mock-exam-2/LESSON.md",
+          "description": "Second simulation, weighted to your weak areas."
+        },
+        {
+          "id": "9.7",
+          "name": "Mock #2 review & gap plan II",
+          "week": 12,
+          "minutes": 120,
+          "reading_min": 30,
+          "type": "review",
+          "ka": "ALL",
+          "path": "lesson-modules/9.7-mock-2-review/LESSON.md",
+          "description": "Review, and decide whether the exam date holds."
+        },
+        {
+          "id": "9.8",
+          "name": "Gap-closing sprint II",
+          "week": 12,
+          "minutes": 90,
+          "reading_min": 30,
+          "type": "drill",
+          "ka": "ALL",
+          "path": "lesson-modules/9.8-gap-sprint-2/LESSON.md",
+          "description": "Final targeted sprint."
+        },
+        {
+          "id": "9.9",
+          "name": "Final Mock Exam #3: go/no-go",
+          "week": 13,
+          "minutes": 225,
+          "reading_min": 0,
+          "type": "exam",
+          "ka": "ALL",
+          "path": "lesson-modules/9.9-mock-exam-3-final/LESSON.md",
+          "description": "The go/no-go signal."
+        },
+        {
+          "id": "9.10",
+          "name": "Final review: I/O map, technique sheet, confusions, glossary sprint",
+          "week": 13,
+          "minutes": 120,
+          "reading_min": 30,
+          "type": "review",
+          "ka": "ALL",
+          "path": "lesson-modules/9.10-final-review/LESSON.md",
+          "description": "Light, high-yield review. No new material."
+        },
+        {
+          "id": "9.11",
+          "name": "Exam-day playbook & confidence",
+          "week": 13,
+          "minutes": 45,
+          "reading_min": 0,
+          "type": "lesson",
+          "ka": "GEN",
+          "path": "lesson-modules/9.11-exam-day-playbook/LESSON.md",
+          "description": "Logistics, mindset, and your personal playbook."
+        }
+      ]
+    }
+  ]
+}

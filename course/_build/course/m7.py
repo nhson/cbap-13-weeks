@@ -1,0 +1,226 @@
+from render import T, TE, KA, IO, F, CC, R, UC, P, EX, CF
+
+KAN = 'Solution Evaluation'
+MODULE = {'id': '7', 'name': 'Solution Evaluation (14%)', 'weeks': '9',
+          'description': 'The 6-store pilot has run for 10 weeks. Measure it, analyze variances, separate solution limitations from enterprise limitations, and recommend actions.',
+          'lessons': [
+{
+ 'id': '7.1', 'slug': 'measure-solution-performance', 'title': 'SE overview + 8.1 Measure Solution Performance', 'week': 9, 'minutes': 80, 'reading_min': 30, 'ka': 'SE',
+ 'teaser': 'Ten weeks of pilot data. What should you measure?',
+ 'prepare': [KA(KAN), T('Measure Solution Performance'), IO('Solution Performance Measures'), IO('Implemented Solution (external)'), TE('Metrics and Key Performance Indicators (KPIs)'), CF('14-pilot-results.md')],
+ 'hook': """Fast-forward: OmniGrocer has been live in 6 pilot stores for 10 weeks. Two stores shine, two struggle. Elena asks: *"Is it working?"* Solution Evaluation (14%) starts with **8.1 Measure Solution Performance**.""",
+ 'objectives': ['Explain SE\'s 5 tasks and chain', 'Know the 3 elements of 8.1', 'Define and validate quantitative and qualitative measures'],
+ 'teach': [
+  {'title': 'SE at a glance',
+   'read': [KA(KAN)],
+   'points': ['Five tasks: 8.1 Measure Solution Performance → 8.2 Analyze Performance Measures → 8.3 Assess Solution Limitations and 8.4 Assess Enterprise Limitations → 8.5 Recommend Actions to Increase Solution Value.',
+              'SE evaluates solutions in any state: prototypes, proofs of concept, pilots, beta releases, operational releases.',
+              'Chain: Solution Performance Measures → Solution Performance Analysis → Solution Limitation and Enterprise Limitation → Recommended Actions.'],
+   'check': 'Can you do Solution Evaluation on a prototype that isn\'t live yet?',
+   'expect': 'Yes',
+   'feedback': 'yes: SE applies to prototypes, PoCs, pilots, betas and operational solutions.'},
+  {'title': 'Measure Solution Performance',
+   'read': [T('Measure Solution Performance')],
+   'points': ['Purpose (in our words): Define, validate and collect the measures that show how a solution is performing.',
+              'Elements: Define Solution Performance Measures (quantitative and qualitative; may already exist), Validate Performance Measures (with stakeholders, aligned with business objectives), Collect Performance Measures (volume or sample size, frequency and timing, currency).',
+              'Inputs: Business Objectives, Implemented Solution (external). Output: Solution Performance Measures.'],
+   'check': 'Name one quantitative and one qualitative measure for the pilot.',
+   'expect': 'e.g. order accuracy %; staff or customer sentiment',
+   'feedback': 'quantitative, e.g. accuracy %, ready-in-2h %; qualitative, e.g. CSAT verbatims, staff survey attitudes.'}
+ ],
+ 'apply': [
+  {'title': 'Measures framework for the pilot',
+   'brief': 'Validate that the measures actually reflect the business objectives.',
+   'files': [CF('14-pilot-results.md'), CF('15-pilot-metrics.csv'), 'workspace/41-future-state-description.md'],
+   'ask': 'List the pilot measures, map each to a business objective, state whether it is quantitative or qualitative, and assess collection (sample size, frequency, currency). Which important measure is missing?',
+   'action': 'Coach and save. Missing measures: inventory accuracy per store (the root driver), picker hours scheduled vs actual (it IS in the CSV, so highlight it), repeat-order rate, cost per order.',
+   'output': '60-solution-performance-measures.md'}
+ ],
+ 'quiz': {'n': 10, 'focus': 'SE overview, solution states evaluated, 8.1 elements, quantitative vs qualitative measures, validation of measures, inputs and output', 'ka': 'SE', 'topic': '8.1',
+          'traps': ['SE only after full rollout', 'BA performance measures vs solution measures', 'measures not validated with stakeholders']},
+ 'takeaways': ['SE works on solutions in any state.', '8.1: define, validate, collect measures.', 'Measures must tie to business objectives.'],
+ 'reading': ['BABOK 8.0–8.1 (pp.163–169)', 'Lessing ch.11 pp.276–286', 'Jonasson ch.9 (pp.221–231)'],
+ 'flashcards': ['SE task chain outputs? :: Solution Performance Measures → Solution Performance Analysis → Solution Limitation / Enterprise Limitation → Recommended Actions', '8.1 elements? :: Define Solution Performance Measures; Validate Performance Measures; Collect Performance Measures'],
+ 'success': ['workspace/60-solution-performance-measures.md created', 'Drill logged; task card added'],
+},
+{
+ 'id': '7.2', 'slug': 'analyze-performance-measures', 'title': '8.2 Analyze Performance Measures', 'week': 9, 'minutes': 80, 'reading_min': 15, 'ka': 'SE',
+ 'teaser': 'Trends, variances and accuracy in the pilot data.',
+ 'prepare': [T('Analyze Performance Measures'), IO('Solution Performance Analysis'), IO('Potential Value'), CF('15-pilot-metrics.csv')],
+ 'hook': """The averages hide the story. Riverton hits 97.4% accuracy; Hillcrest is falling to 86%. **8.2 Analyze Performance Measures** asks: how is the solution performing against its *potential value*, and why?""",
+ 'objectives': ['Know the 5 elements of 8.2', 'Analyze trends and variances', 'Judge the accuracy and significance of data'],
+ 'teach': [
+  {'title': 'Analyze Performance Measures',
+   'read': [T('Analyze Performance Measures')],
+   'points': ['Purpose (in our words): Interpret the performance measures to see how the solution is delivering value compared with what was expected.',
+              'Elements: Solution Performance versus Desired Value, Risks, Trends, Accuracy, Performance Variances.',
+              'Inputs: Potential Value (from 6.2), Solution Performance Measures. Output: Solution Performance Analysis.',
+              'Look at time periods long enough to reveal trends, and check that data is accurate and reproducible. Examine the root causes of variances.'],
+   'check': 'Which input gives you the "benchmark" to compare actual performance against?',
+   'expect': 'Potential Value',
+   'feedback': 'Potential Value (from Define Future State).'}
+ ],
+ 'apply': [
+  {'title': 'Analyze the pilot data',
+   'brief': 'Let the data speak. You can compute it.',
+   'files': [CF('15-pilot-metrics.csv'), CF('14-pilot-results.md')],
+   'ask': 'Look at the CSV: per store, what are the trends from week 2 → 10 in accuracy, OOS-at-pick and picker hours actual vs scheduled? What variance patterns do you see? What correlates with poor accuracy?',
+   'action': 'Run a quick analysis (Python via Bash on the CSV: per-store week-10 values, deltas, and the correlation between picker-hours shortfall and accuracy or OOS). Coach interpretation and save a Solution Performance Analysis with a table and 4–5 insights. Expected: Bayview and Hillcrest have large picker-hour shortfalls (~45–40% under schedule) and the highest OOS-at-pick; Hillcrest worsens after week 4 (aisle reset); the strong stores staff pickers as scheduled.',
+   'output': '61-solution-performance-analysis.md'}
+ ],
+ 'quiz': {'n': 10, 'focus': '8.2 elements, performance vs desired value, trends, accuracy, variances, input Potential Value', 'ka': 'SE', 'topic': '8.2',
+          'traps': ['Potential Value produced in SE', 'one data point = trend', 'analysis vs limitation assessment']},
+ 'takeaways': ['Compare actual performance against Potential Value.', 'Elements: vs desired value, risks, trends, accuracy, variances.', 'Output: Solution Performance Analysis.'],
+ 'reading': ['BABOK 8.2 (pp.170–172)', 'Lessing pp.286–291'],
+ 'flashcards': ['8.2 elements? :: Solution Performance vs Desired Value; Risks; Trends; Accuracy; Performance Variances', '8.2 inputs? :: Potential Value; Solution Performance Measures'],
+ 'success': ['workspace/61-solution-performance-analysis.md created with computed data', 'Drill logged; task card added'],
+},
+{
+ 'id': '7.3', 'slug': 'assess-solution-limitations', 'title': '8.3 Assess Solution Limitations', 'week': 9, 'minutes': 70, 'reading_min': 15, 'ka': 'SE',
+ 'teaser': 'What inside the solution is holding value back?',
+ 'prepare': [T('Assess Solution Limitations'), IO('Solution Limitation'), TE('Root Cause Analysis'), EX('Commonly Confused Concepts')],
+ 'hook': """Some problems live *inside* the solution: the substitution chat nobody uses, stock status that is wrong, handhelds dying. **8.3 Assess Solution Limitations**.""",
+ 'objectives': ['Know the 3 elements of 8.3', 'Investigate solution problems (root cause)', 'Separate solution vs enterprise limitations'],
+ 'teach': [
+  {'title': 'Assess Solution Limitations',
+   'read': [T('Assess Solution Limitations')],
+   'points': ['Purpose (in our words): Find the factors inside the solution that stop it from delivering its full value.',
+              'Elements: Identify Internal Solution Component Dependencies, Investigate Solution Problems (where outputs are below acceptable quality, or potential value is not realized), Impact Assessment (size and severity, likelihood, impact on operations, capacity to absorb impact).',
+              'Inputs: Implemented Solution (external), Solution Performance Analysis. Output: Solution Limitation.'],
+   'check': '"Stock shown as available is wrong because StockPoint is wrong." Solution limitation or enterprise limitation?',
+   'expect': 'Debatable: data within the solution\'s components is a solution limitation; data governance is enterprise',
+   'feedback': 'the stock feed is a solution component dependency (StockPoint and its integration are part of the solution), so it is a solution limitation. The *process* causing poor accuracy (cycle counts, reset updates) is an enterprise issue. Good answers separate the two.'}
+ ],
+ 'apply': [
+  {'title': 'Solution limitations register',
+   'brief': 'Identify the internal factors.',
+   'files': [CF('14-pilot-results.md'), 'workspace/61-solution-performance-analysis.md'],
+   'ask': 'List the solution limitations (component dependencies, problems), each with root cause and impact assessment (size, severity, likelihood, impact on operations). Keep enterprise issues aside for the next lesson.',
+   'action': 'Coach and save. Examples: stock-status accuracy (StockPoint dependency); aisle data not refreshed after resets; handheld battery life; substitution chat UX too slow; coupon module deferred.',
+   'output': '62-solution-limitations.md'}
+ ],
+ 'quiz': {'n': 8, 'focus': '8.3 elements, internal solution factors, impact assessment, solution vs enterprise limitation', 'ka': 'SE', 'topic': '8.3',
+          'traps': ['culture issue as solution limitation', 'Solution Limitation output from 8.4']},
+ 'takeaways': ['Solution limitations are INSIDE the solution.', 'Elements: dependencies, investigate problems, impact assessment.'],
+ 'reading': ['BABOK 8.3 (pp.173–176)', 'Lessing pp.291–295'],
+ 'flashcards': ['8.3 elements? :: Identify Internal Solution Component Dependencies; Investigate Solution Problems; Impact Assessment'],
+ 'success': ['workspace/62-solution-limitations.md created', 'Drill logged; task card added'],
+},
+{
+ 'id': '7.4', 'slug': 'assess-enterprise-limitations', 'title': '8.4 Assess Enterprise Limitations', 'week': 9, 'minutes': 75, 'reading_min': 15, 'ka': 'SE',
+ 'teaser': 'Incentives, culture, structure: the problems outside the software.',
+ 'prepare': [T('Assess Enterprise Limitations'), IO('Enterprise Limitation'), CF('16-store-staff-survey.md'), 'workspace/43-change-strategy-and-solution-scope.md'],
+ 'hook': """"Nobody's bonus includes online orders, so why would the manager care?" That isn't a software bug. **8.4 Assess Enterprise Limitations** looks at culture, structure and operations *outside* the solution.""",
+ 'objectives': ['Know the 4 elements of 8.4', 'Assess culture, stakeholder impact, structure and operations', 'Compare with your earlier readiness assessment'],
+ 'teach': [
+  {'title': 'Assess Enterprise Limitations',
+   'read': [T('Assess Enterprise Limitations')],
+   'points': ['Purpose (in our words): Find the factors in the wider enterprise (culture, structure, operations) that stop the solution from delivering value.',
+              'Elements: Enterprise Culture Assessment (beliefs, values, norms; e.g. incentives), Stakeholder Impact Analysis (functions, locations, concerns), Organizational Structure Changes (formal and informal), Operational Assessment (policies, procedures, capabilities, tools, skills, resources).',
+              'Inputs: Current State Description, Implemented Solution (external), Solution Performance Analysis. Output: Enterprise Limitation. 18 techniques, the most in SE.'],
+   'check': 'Managers moving pickers to tills during peaks: which element?',
+   'expect': 'Enterprise culture assessment / operational assessment',
+   'feedback': 'enterprise culture (incentives and norms make picking a "cost") plus operational assessment (resource policy). Either is defensible when justified.'}
+ ],
+ 'apply': [
+  {'title': 'Enterprise limitations + readiness look-back',
+   'brief': 'Compare what you predicted in week 6 with what happened.',
+   'files': [CF('16-store-staff-survey.md'), CF('14-pilot-results.md'), 'workspace/43-change-strategy-and-solution-scope.md', 'workspace/61-solution-performance-analysis.md'],
+   'ask': 'Using the 4 elements, list the enterprise limitations with evidence. Then compare with your week-6 readiness assessment: what did you predict correctly, and what did you miss?',
+   'action': 'Coach and save. Key limitations: incentives (picking not in store targets or bonuses → culture); manager priority (Bayview 11%); no aisle-data update procedure after resets (operational); handheld replacement budget (operational resource); picker role and union status (structure).',
+   'output': '63-enterprise-limitations.md',
+   'review': 'marcus-store-ops', 'review_focus': 'ask for his reaction, since incentives are his domain',
+   'discovery': 'The best technology in the chain still underperforms where incentives work against it. Value realization is an enterprise problem as much as a software one.'}
+ ],
+ 'quiz': {'n': 8, 'focus': '8.4 elements, culture, stakeholder impact, structure, operational assessment; enterprise vs solution limitation', 'ka': 'SE', 'topic': '8.4',
+          'traps': ['enterprise limitation fixed by changing software', 'stakeholder impact analysis vs stakeholder analysis (3.2)']},
+ 'takeaways': ['Enterprise limitations are OUTSIDE the solution: culture, structure, operations.', 'Elements: culture, stakeholder impact, org structure changes, operational assessment.'],
+ 'exam_rule': 'Incentives, culture, policies, skills, org structure → enterprise limitation. Component defects or dependencies → solution limitation.',
+ 'reading': ['BABOK 8.4 (pp.177–181)', 'Lessing pp.295–300'],
+ 'flashcards': ['8.4 elements? :: Enterprise Culture Assessment; Stakeholder Impact Analysis; Organizational Structure Changes; Operational Assessment'],
+ 'success': ['workspace/63-enterprise-limitations.md created and Marcus-reviewed', 'Drill logged; task card added'],
+},
+{
+ 'id': '7.5', 'slug': 'recommend-actions', 'title': '8.5 Recommend Actions to Increase Solution Value', 'week': 9, 'minutes': 75, 'reading_min': 15, 'ka': 'SE',
+ 'teaser': 'Before chain-wide rollout: what should change?',
+ 'prepare': [T('Recommend Actions to Increase Solution Value'), IO('Recommended Actions'), TE('Prioritization')],
+ 'hook': """Elena must decide: roll out chain-wide on schedule, pause, or fix first. **8.5 Recommend Actions to Increase Solution Value**, the task that closes the loop back to strategy.""",
+ 'objectives': ['Know the elements and recommendation types of 8.5', 'Recommend actions across solution and enterprise', 'Adjust the performance measures themselves when needed'],
+ 'teach': [
+  {'title': 'Recommend Actions',
+   'read': [T('Recommend Actions to Increase Solution Value')],
+   'points': ['Purpose (in our words): Recommend actions that close the gap between the potential and actual value of the solution.',
+              'Elements: Adjust Solution Performance Measures (if the measures themselves are wrong), and Recommendations: **do nothing, organizational change, reduce complexity of interfaces, eliminate redundancy, avoid waste, identify additional capabilities, retire the solution**.',
+              'Inputs: Enterprise Limitation, Solution Limitation. Output: Recommended Actions, which feed back as a guideline to 4.5 and beyond.'],
+   'check': 'Hillcrest\'s problem is the aisle-data process and incentives. Which recommendation category fits best?',
+   'expect': 'Organizational change',
+   'feedback': 'organizational change (incentives, procedures), not more software.'}
+ ],
+ 'apply': [
+  {'title': 'Pilot recommendation to Elena',
+   'brief': 'A decision-ready recommendation for the rollout gate.',
+   'files': ['workspace/62-solution-limitations.md', 'workspace/63-enterprise-limitations.md', 'workspace/61-solution-performance-analysis.md'],
+   'ask': 'Recommend actions with category (from the BABOK list), owner, expected impact, and priority. Should measures be adjusted? What is your go / conditional-go / no-go for wave-1 rollout?',
+   'action': 'Coach and save. Likely: conditional go. Organizational change: picking in store targets and centrally funded picker hours; aisle-data update procedure tied to resets. Additional capability: coupon module. Reduce interface complexity: the substitution chat UX. Handheld replacement brought forward. Adjust measures: add inventory accuracy per store and picker-hours adherence.',
+   'output': '64-recommended-actions.md',
+   'review': 'elena-sponsor', 'review_focus': 'present the go/no-go recommendation'}
+ ],
+ 'quiz': {'n': 8, 'focus': '8.5 elements and recommendation types, adjusting measures, inputs and output, loop back to strategy', 'ka': 'SE', 'topic': '8.5',
+          'traps': ['always recommend more features', 'do nothing never valid', 'retire the solution not an option']},
+ 'takeaways': ['Recommendations include do nothing, organizational change, reduce interface complexity, eliminate redundancy, avoid waste, add capabilities, retire.', 'Sometimes the measures themselves need adjusting.'],
+ 'reading': ['BABOK 8.5 (pp.182–184)', 'Lessing pp.300–315 (incl. knowledge quiz)'],
+ 'flashcards': ['8.5 recommendation types? :: Do nothing; organizational change; reduce complexity of interfaces; eliminate redundancy; avoid waste; identify additional capabilities; retire the solution', '8.5 inputs? :: Enterprise Limitation; Solution Limitation'],
+ 'success': ['workspace/64-recommended-actions.md created and sponsor-reviewed', 'Drill logged; task card added'],
+},
+{
+ 'id': '7.6', 'slug': 'se-techniques-lab', 'title': 'SE techniques lab: metrics & KPIs, data mining, vendor assessment, root cause', 'week': 9, 'minutes': 60, 'reading_min': 15, 'ka': 'TECH', 'type': 'lab',
+ 'teaser': 'The measurement toolkit.',
+ 'prepare': [TE('Metrics and Key Performance Indicators (KPIs)'), TE('Data Mining'), TE('Vendor Assessment'), TE('Root Cause Analysis'), TE('Survey or Questionnaire')],
+ 'hook': """SE questions often hinge on *measurement* techniques. Today: metrics and KPIs (indicator vs metric vs KPI), data mining (descriptive, diagnostic, predictive), vendor assessment, and root cause analysis revisited.""",
+ 'objectives': ['Distinguish indicator, metric, KPI', 'Know data mining types', 'Know vendor assessment criteria'],
+ 'teach': [
+  {'title': 'Measurement toolkit',
+   'read': [TE('Metrics and Key Performance Indicators (KPIs)'), TE('Data Mining'), TE('Vendor Assessment')],
+   'points': ['Indicator: a specific numerical measure of progress. Metric: a quantifiable level of an indicator, e.g. a target. KPI: an indicator of progress towards a strategic goal. Good indicators are clear, relevant, economical, adequate and quantifiable. Consider the data source, collection method and reporting.',
+              'Data mining: descriptive (patterns, clustering), diagnostic (why: decision trees, association), predictive (forecast). Supports decision making; needs quality data.',
+              'Vendor assessment: knowledge and expertise, licensing and pricing models, product or vendor market position, terms and conditions, experience, reputation and stability.',
+              'Root cause analysis: fishbone (Ishikawa) categories, five whys.'],
+   'check': 'Is "ready within 2 hours ≥ 95%" an indicator, a metric, or a KPI?',
+   'expect': 'The indicator is "% ready within 2h"; ≥95% is the target metric; it is a KPI if tied to the strategic goal',
+   'feedback': 'indicator = % ready in 2h; metric/target = 95%; it is a KPI because it measures progress towards the convenience goal.'}
+ ],
+ 'apply': [
+  {'title': 'Five whys on Hillcrest',
+   'brief': 'Quick root cause practice.',
+   'files': [CF('14-pilot-results.md'), CF('16-store-staff-survey.md')],
+   'ask': 'Run a five-whys on "Hillcrest order accuracy fell from 90.2% to 86.4%".',
+   'action': 'Coach it (why → OOS at pick up → aisle data stale → no update after the reset → no procedure or owner → head office never assigned aisle-data ownership) and save.',
+   'output': '65-five-whys-hillcrest.md'}
+ ],
+ 'quiz': {'n': 10, 'focus': 'metrics/indicators/KPIs, data mining types, vendor assessment criteria, root cause analysis, surveys for measurement', 'ka': 'TECH', 'topic': 'se-techniques',
+          'traps': ['metric vs indicator', 'predictive vs diagnostic mining', 'vendor assessment only price']},
+ 'takeaways': ['Indicator ≠ metric ≠ KPI.', 'Data mining: descriptive, diagnostic, predictive.', 'Vendor assessment looks well beyond price.'],
+ 'reading': ['BABOK 10.14, 10.28, 10.40, 10.49'],
+ 'flashcards': ['Indicator vs metric vs KPI? :: Indicator = numerical measure of progress; metric = quantifiable level/target; KPI = indicator tied to a strategic goal', 'Data mining types? :: Descriptive, diagnostic, predictive'],
+ 'success': ['workspace/65-five-whys-hillcrest.md created', 'Drill logged'],
+},
+{
+ 'id': '7.7', 'slug': 'se-exam-drill', 'title': 'SE exam drill + Phase 2 milestone', 'week': 9, 'minutes': 75, 'reading_min': 0, 'ka': 'SE', 'type': 'drill',
+ 'teaser': 'Finish Phase 2: all 30 tasks done.',
+ 'prepare': [KA(KAN), T('Measure Solution Performance'), T('Analyze Performance Measures'), T('Assess Solution Limitations'), T('Assess Enterprise Limitations'), T('Recommend Actions to Increase Solution Value')],
+ 'hook': """Last KA drill: 40 SE questions. Then we check the Phase 2 milestone from your roadmap: **every KA quiz at 75% or higher**.""",
+ 'quiz': {'n': 40, 'focus': 'all of SE 8.1–8.5 plus measurement techniques; include a 5-question case study', 'ka': 'SE', 'topic': 'se-40', 'mix': '26 scenario, 8 I/O and technique, 6 definition'},
+ 'extra': ["""## Phase 2 milestone
+
+ACTION: Read scores.csv and build the per-KA table from the 40-question drills (BAPM, E&C, RLCM, SA, RADD ×2, SE): score %, weight, and pass/fail against 75%. Compare with the diagnostic.
+
+STOP: Here's your KA table. Which KA are you most proud of, and which worries you?
+
+USER: Responds
+
+ACTION: For each KA under 75%, schedule a `/drill <KA> 15` in week 10 and write it to progress.json `notes`. Update weak_topics. Confirm that task cards cover all 30 tasks, or list the missing ones."""],
+ 'takeaways': ['SE: measure → analyze → solution and enterprise limitations → recommend.', 'All 30 tasks studied. Consolidation starts next week.'],
+ 'reading': ['BABOK ch.10 intro (p.215) before lesson 8.1'],
+ 'success': ['40-question SE drill completed and logged', 'Phase 2 milestone table produced', 'Remediation drills scheduled'],
+},
+]}
