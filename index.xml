@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>CBAP in 13 Weeks</title>
+      <link>https://nhson.github.io/cbap-13-weeks</link>
+      <description>Last 10 notes on CBAP in 13 Weeks</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>CBAP in 13 Weeks</title>
+    <link>https://nhson.github.io/cbap-13-weeks/</link>
+    <guid>https://nhson.github.io/cbap-13-weeks/</guid>
+    <description><![CDATA[ A free, interactive path to the IIBA® CBAP® exam. ]]></description>
+    <pubDate>Sun, 27 Sep 2026 02:58:54 GMT</pubDate>
+  </item><item>
+    <title>CBAP Roadmap (13 weeks)</title>
+    <link>https://nhson.github.io/cbap-13-weeks/CBAP-Roadmap</link>
+    <guid>https://nhson.github.io/cbap-13-weeks/CBAP-Roadmap</guid>
+    <description><![CDATA[ CBAP 3-Month Learning Roadmap (13 weeks × 10 h ≈ 130 h) Context A high-level CBAP study roadmap based on current (2026) exam facts: 3 months at 10 hours a week. ]]></description>
+    <pubDate>Sun, 27 Sep 2026 02:58:54 GMT</pubDate>
+  </item><item>
+    <title>About &amp; Disclaimer</title>
+    <link>https://nhson.github.io/cbap-13-weeks/about</link>
+    <guid>https://nhson.github.io/cbap-13-weeks/about</guid>
+    <description><![CDATA[ What this is A free, open study companion for the IIBA® CBAP® exam: a 13-week plan, 75 interactive lessons built around a fictional case, and a linked knowledge graph of the BABOK® Guide v3 structure. ]]></description>
+    <pubDate>Sun, 27 Sep 2026 02:58:54 GMT</pubDate>
+  </item><item>
+    <title>02-harvest-postmortem</title>
+    <link>https://nhson.github.io/cbap-13-weeks/scenario/case-files/02-harvest-postmortem</link>
+    <guid>https://nhson.github.io/cbap-13-weeks/scenario/case-files/02-harvest-postmortem</guid>
+    <description><![CDATA[ Project Harvest: Post-Mortem (DRAFT, never formally approved) Author: former PMO analyst · March 2025 · Status: “draft v3 – do not circulate” Summary Harvest aimed to launch online ordering with home delivery and in-store pickup in 10 stores. ]]></description>
+    <pubDate>Sun, 27 Sep 2026 02:58:54 GMT</pubDate>
+  </item><item>
+    <title>04-customer-feedback-q2</title>
+    <link>https://nhson.github.io/cbap-13-weeks/scenario/case-files/04-customer-feedback-q2</link>
+    <guid>https://nhson.github.io/cbap-13-weeks/scenario/case-files/04-customer-feedback-q2</guid>
+    <description><![CDATA[ Customer Feedback: Q2 extract (app store reviews, contact centre, loyalty survey verbatims) “Love the store, hate that I can’t order ahead. ]]></description>
+    <pubDate>Sun, 27 Sep 2026 02:58:54 GMT</pubDate>
+  </item><item>
+    <title>06-competitor-benchmark</title>
+    <link>https://nhson.github.io/cbap-13-weeks/scenario/case-files/06-competitor-benchmark</link>
+    <guid>https://nhson.github.io/cbap-13-weeks/scenario/case-files/06-competitor-benchmark</guid>
+    <description><![CDATA[ Competitor Benchmark (Digital Marketing team, Lily Park, June) CapabilityFreshWayQuickCartBest-in-class (national)GreenBasketOrder channelApp + webApp + web + phoneApp + web + voicenonePickup lead time2 h4 h1 h—DeliveryYes (fee $7.99)NoYes—Pickup feeFree over $50$2.99Free over $35—Substitution prefe... ]]></description>
+    <pubDate>Sun, 27 Sep 2026 02:58:54 GMT</pubDate>
+  </item><item>
+    <title>09-interview-transcript-rosa</title>
+    <link>https://nhson.github.io/cbap-13-weeks/scenario/case-files/09-interview-transcript-rosa</link>
+    <guid>https://nhson.github.io/cbap-13-weeks/scenario/case-files/09-interview-transcript-rosa</guid>
+    <description><![CDATA[ Interview Transcript: Rosa Delgado, Store Manager, Riverton Central Conducted by: previous BA contractor (Harvest), Nov 2024. Unreviewed. ]]></description>
+    <pubDate>Sun, 27 Sep 2026 02:58:54 GMT</pubDate>
+  </item><item>
+    <title>14-pilot-results</title>
+    <link>https://nhson.github.io/cbap-13-weeks/scenario/case-files/14-pilot-results</link>
+    <guid>https://nhson.github.io/cbap-13-weeks/scenario/case-files/14-pilot-results</guid>
+    <description><![CDATA[ Pilot Report: 6 stores, 10 weeks after go-live (solution: OmniGrocer Suite) Prepared by Tom Okafor. Data in 15-pilot-metrics.csv. ]]></description>
+    <pubDate>Sun, 27 Sep 2026 02:58:54 GMT</pubDate>
+  </item><item>
+    <title>The GreenBasket Scenario</title>
+    <link>https://nhson.github.io/cbap-13-weeks/scenario/</link>
+    <guid>https://nhson.github.io/cbap-13-weeks/scenario/</guid>
+    <description><![CDATA[ You are the new Senior Business Analyst at GreenBasket Markets, a 42-store regional grocer. ]]></description>
+    <pubDate>Sun, 27 Sep 2026 02:58:54 GMT</pubDate>
+  </item><item>
+    <title>01-sponsor-kickoff-email</title>
+    <link>https://nhson.github.io/cbap-13-weeks/scenario/case-files/01-sponsor-kickoff-email</link>
+    <guid>https://nhson.github.io/cbap-13-weeks/scenario/case-files/01-sponsor-kickoff-email</guid>
+    <description><![CDATA[ From: Elena Marsh (COO) To: Grace Nwosu; Tom Okafor; [you] Cc: David Chen; Marcus Lee; Helen Kowalski Subject: Click &amp; Collect – let’s get it right this time Team, Welcome aboard to our new Senior BA. ]]></description>
+    <pubDate>Sun, 27 Sep 2026 02:58:54 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
